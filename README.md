@@ -6,14 +6,10 @@ This Bash script install Ruby, Rails and Bundler with rbenv and ruby-build on Ub
 
 Installation
 ------------
-    chmod +x setup.sh 
-
-- change version Ruby in header script (default 1.9.3-p362)
-- run as standard user
-
-    ./setup.sh
-    
-- RoR environment is created in the home directory
+1. `chmod +x setup.sh`
+2. change version Ruby in header script (default 1.9.3-p362)
+3. run as standard user `./setup.sh`
+4. RoR environment was created in the home directory
 
 Credentials
 -----------
