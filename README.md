@@ -1,16 +1,15 @@
 rbenv4ubuntu
 ============
 
-This Bash script install Ruby, Rails and Bundler with rbenv and ruby-build on Ubuntu.
-
+The installation Bash script for Ruby, Rails and Bundler on Ubuntu.
+Uses [rbenv](https://github.com/sstephenson/rbenv "rbenv") and [ruby-build](https://github.com/sstephenson/ruby-build "ruby-build") who were created by Sam Stephenson.
 
 Installation
 ------------
+0. clone repo
 1. `chmod +x setup.sh`
 2. change version Ruby in header script (default 1.9.3-p362)
 3. run as standard user `./setup.sh`
-4. RoR environment was created in the home directory
+4. RoR environment was created in the home directory in `./rbenv`
 
-Credentials
------------
-[rbenv](https://github.com/sstephenson/rbenv "rbenv") and [ruby-build](https://github.com/sstephenson/ruby-build "ruby-build") was created by Sam Stephenson
+
