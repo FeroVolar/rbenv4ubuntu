@@ -2,18 +2,17 @@
 ##
 ## rbenv4ubuntu
 ## This Bash script install Ruby on Rails with rbenv on Ubuntu.
-## - run as standard user
-## - environment is created in the home directory
 ##
 
 ## variables
-VERSION="0.2"
+VERSION="0.4"
 RUBY_VER="1.9.3-p362"
 
 ## check
 if [ -e ~/.rbenv/ ]; then
-  	echo -n "__"
-		echo -n "rbenv is already installed."
+		echo "__"
+		echo "rbenv is already installed."
+		exit
 	else
 		echo "      _                     _  _         _                 _         "
 		echo "     | |                   | || |       | |               | |        "
@@ -44,14 +43,14 @@ if [ $validate = "y" ]; then
 		echo "__"
 		echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc
 		echo 'eval "$(rbenv init -)"' >> ~/.bashrc
-		exec $SHELL
+		source ~/.bashrc
 
 		echo "Clone ruby-build."
 		echo "__"
 		mkdir -p ~/.rbenv/plugins
 		cd ~/.rbenv/plugins
 		git clone git://github.com/sstephenson/ruby-build.git
-		exec $SHELL
+		source ~/.bashrc
 
 		echo "Install Ruby."
 		echo "__"
@@ -59,7 +58,7 @@ if [ $validate = "y" ]; then
 		rbenv global $RUBY_VER
 		rbenv versions
 		rbenv local $RUBY_VER
-		exec $SHELL
+		source ~/.bashrc
 
 		echo "Install Rails and Bundler from gem."
 		echo "__"
