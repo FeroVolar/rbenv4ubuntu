@@ -10,6 +10,6 @@ Installation
 1. `chmod +x setup.sh`
 2. change version Ruby in header script (default 1.9.3-p362)
 3. run as standard user `./setup.sh`
-4. RoR environment was created in the home directory in `./rbenv`
+4. RoR environment was created in the home directory in `~/.rbenv`
 
 
