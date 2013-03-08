@@ -5,8 +5,8 @@
 ##
 
 ## variables
-VERSION="0.4"
-RUBY_VER="1.9.3-p362"
+VERSION="0.5"
+RUBY_VER="2.0.0-rc1"
 
 ## check
 if [ -e ~/.rbenv/ ]; then
